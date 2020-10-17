@@ -1,0 +1,2329 @@
+{
+  "intents": [
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "Are there any discounts going on??"
+        },
+        {
+          "text": "Can you provide the catalogue"
+        },
+        {
+          "text": "Do you have any offers?"
+        },
+        {
+          "text": "Do you have some promotions on??"
+        },
+        {
+          "text": "I want to have a look at the rate list"
+        },
+        {
+          "text": "What all items are there in your shop?"
+        },
+        {
+          "text": "What all products do you have?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Goodbye",
+      "examples": [
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "I am done"
+        },
+        {
+          "text": "Thank you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Meenakshi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "name",
+      "examples": [
+        {
+          "text": "By what name can I call you?"
+        },
+        {
+          "text": "How do you like to be addresses as?"
+        },
+        {
+          "text": "May I know your name please?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "groceries"
+        },
+        {
+          "text": "I would like to buy fruits"
+        },
+        {
+          "text": "I would like to buy groceries"
+        },
+        {
+          "text": "I would like to buy vegetables"
+        },
+        {
+          "text": "I would like to place an order"
+        },
+        {
+          "text": "Would you take my order"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "menu",
+          "synonyms": [
+            "catalogue",
+            "Items",
+            "products",
+            "rate list"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "deals",
+            "discount",
+            "discounts",
+            "promotions",
+            "sale"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "fruits",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "banana",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Grapes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Orange",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Papaya",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Watermelon",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Goodbye",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bye",
+          "synonyms": [
+            "see you",
+            "Thank you",
+            "that's it"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good day",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "I am done",
+          "synonyms": [
+            "That's it"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": [
+            "Nope"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Thank you",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "ga",
+            "Gud aftrn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "ge",
+            "gud evng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "gm",
+            "gud mrng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "groceries",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Atta",
+          "synonyms": [
+            "Flour"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Bread",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dal",
+          "synonyms": [
+            "Pulses"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Milk",
+          "synonyms": [
+            "Dairy"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Rice",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "name",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "name",
+          "synonyms": [
+            "names"
+          ]
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "fruits",
+          "synonyms": [
+            "fruit"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "groceries",
+          "synonyms": [
+            "grocery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy",
+            "purchase"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "vegetables",
+          "synonyms": [
+            "vegetable",
+            "veggies"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": [
+            "Cash On Delivery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "phonenumber",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "phone number",
+          "patterns": [
+            "(\\d{10})"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "response",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": [
+            "nope",
+            "not"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "alright",
+            "ok",
+            "okay",
+            "yeah"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "vegetables",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Garlic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ginger",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Green Vegetables",
+          "synonyms": [
+            "Fenugreek",
+            "Methi",
+            "Palak",
+            "Spinach"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Onion",
+          "synonyms": [
+            "Pyaaz"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tomato",
+          "synonyms": [
+            "Tamatar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1602751738638",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1602832022821",
+      "context": {
+        "groceries_Atta": "@groceries:Atta"
+      },
+      "conditions": "@groceries:Atta",
+      "event_name": "input",
+      "dialog_node": "handler_10_1602832022903"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1602834220812",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1602834220896",
+      "previous_sibling": "handler_7_1602834220896"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601385299609",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1601385435168",
+      "previous_sibling": "response_3_1602829888265"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How much quantity do you need?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1602832304632",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602832304654",
+      "previous_sibling": "handler_9_1602832304654"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602827080675",
+      "context": {
+        "enquiry_menu": "@enquiry:menu"
+      },
+      "conditions": "@enquiry:menu",
+      "event_name": "input",
+      "dialog_node": "handler_2_1602827080751"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602832071610",
+      "context": {
+        "number1": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_2_1602832071633"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1602832472796",
+      "context": {
+        "number4": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_2_1602832472808"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_5_1602832523754",
+      "event_name": "input",
+      "dialog_node": "handler_2_1602832523773"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1602830489594",
+      "context": {
+        "fruits_Grapes": "@fruits:Grapes"
+      },
+      "conditions": "@fruits:Grapes",
+      "event_name": "input",
+      "dialog_node": "handler_3_1602830489664"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1602832357301",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602832357325",
+      "previous_sibling": "handler_7_1602832357325"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602832427002",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602832427011",
+      "previous_sibling": "handler_4_1602832427011"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1602832523754",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602832523773",
+      "previous_sibling": "handler_2_1602832523773"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602832427002",
+      "context": {
+        "groceries_Milk": "@groceries:Milk"
+      },
+      "conditions": "@groceries:Milk",
+      "event_name": "input",
+      "dialog_node": "handler_4_1602832427011"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1602835661389",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1602835661416",
+      "previous_sibling": "handler_8_1602835661416"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1602827220834",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1602827220857",
+      "previous_sibling": "handler_9_1602827220857"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602832398583",
+      "context": {
+        "number3": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_5_1602832398605"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How much Quantity do you want?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1602832071610",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1602832071633",
+      "previous_sibling": "handler_2_1602832071633"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_7_1602830489594",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1602830489664",
+      "previous_sibling": "handler_3_1602830489664"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1602832282985",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1602832283005",
+      "previous_sibling": "handler_9_1602832283005"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1602832357301",
+      "context": {
+        "groceries_Bread": "@groceries:Bread"
+      },
+      "conditions": "@groceries:Bread",
+      "event_name": "input",
+      "dialog_node": "handler_7_1602832357325"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_3_1602834220812",
+      "event_name": "input",
+      "dialog_node": "handler_7_1602834220896"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "slot_9_1602832022821",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1602832022903",
+      "previous_sibling": "handler_10_1602832022903"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many bread do you want?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1602832398583",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1602832398605",
+      "previous_sibling": "handler_5_1602832398605"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1602835661389",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_8_1602835661416"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "The following items are available",
+            "source": "https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://listonic.com/wp-content/uploads/2018/12/shopping-list-template-basic-grocery-list.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "slot_4_1602827080675",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1602827080751",
+      "previous_sibling": "handler_2_1602827080751"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1602827220834",
+      "context": {
+        "enquiry_offers": "@enquiry:offers"
+      },
+      "conditions": "@enquiry:offers",
+      "event_name": "input",
+      "dialog_node": "handler_9_1602827220857"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1602832282985",
+      "context": {
+        "groceries_Dal": "@groceries:Dal"
+      },
+      "conditions": "@groceries:Dal",
+      "event_name": "input",
+      "dialog_node": "handler_9_1602832283005"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1602832304632",
+      "context": {
+        "number2": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_9_1602832304654"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many cartons do you need?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1602832472796",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1602832472808",
+      "previous_sibling": "handler_2_1602832472808"
+    },
+    {
+      "type": "standard",
+      "title": "Payment",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your order has been placed and will be mailed to $email. Kindly pay the amount using $payment."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602833020704",
+      "context": {
+        "payment": "@payment"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1602751738638"
+      },
+      "conditions": "@payment:UPI || @payment:COD || @payment:Card",
+      "dialog_node": "node_10_1602835609349",
+      "previous_sibling": "node_1_1602836184088"
+    },
+    {
+      "type": "standard",
+      "title": "vegetables",
+      "parent": "node_4_1602830723586",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@vegetables",
+      "dialog_node": "node_10_1602926912756"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How would you like to make the payment? We accept COD, UPI and Card payment."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602833020704",
+      "context": {
+        "email": "@email.literal"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1602835609349"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_1_1602836184088"
+    },
+    {
+      "type": "standard",
+      "title": "fruits",
+      "parent": "node_5_1602830453688",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@fruits",
+      "dialog_node": "node_1_1602926491342"
+    },
+    {
+      "type": "standard",
+      "title": "Collect name ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Nice to meet you, $name.  How may I help you today??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1601380575163",
+      "context": {
+        "name": "<? input.text.substring(0, 1).toUpperCase() + input.text.substring(1) ?>"
+      },
+      "conditions": "true",
+      "dialog_node": "node_2_1602583187803"
+    },
+    {
+      "type": "standard",
+      "parent": "node_5_1602829134001",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@groceries",
+      "dialog_node": "node_2_1602831979674"
+    },
+    {
+      "type": "standard",
+      "title": "Order",
+      "parent": "node_3_1602927610018",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@order",
+      "dialog_node": "node_3_1601385299609",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "standard",
+      "title": "Order",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "What would you like to buy?? We have groceries, fruits and Vegetables. You may place the order or have a look at the rate list."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#order || @order",
+      "dialog_node": "node_3_1602927610018",
+      "previous_sibling": "node_4_1601382815864"
+    },
+    {
+      "type": "standard",
+      "title": "enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#enquiry || @enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_4_1601382815864",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Vegetables",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ginger is Rs. 25/- per gram"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Garlic is Rs. 20/- per gram"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Green Vegetables are Rs. 20/- per bunch"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Tomato is Rs. 40/- per KG"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Onion is Rs. 80/- per KG"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@vegetables",
+      "dialog_node": "node_4_1602830723586",
+      "previous_sibling": "node_5_1602830453688"
+    },
+    {
+      "type": "standard",
+      "title": "Response",
+      "parent": "node_6_1602832645104",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_4_1602833020704"
+    },
+    {
+      "type": "standard",
+      "title": "Response",
+      "parent": "node_4_1601382815864",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@response",
+      "dialog_node": "node_5_1602827878847",
+      "previous_sibling": "slot_5_1602827220834"
+    },
+    {
+      "type": "standard",
+      "title": "Groceries",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Atta: 5 kg for Rs. 100/-   "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Bread: 1 packet for Rs. 20/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Dal: 1 Kg for Rs. 150/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Milk: 1 carton for Rs. 50/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Rice: 1 Kg for Rs. 50/-"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@groceries",
+      "dialog_node": "node_5_1602829134001",
+      "previous_sibling": "node_3_1602927610018"
+    },
+    {
+      "type": "standard",
+      "title": "Fruits",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Grapes Rs. 40/- per bunch"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Banana Rs. 40/- per dozen"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Orange Rs. 10/- per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Papaya Rs. 20/- per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Watermelon Rs. 40/- per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@fruits",
+      "dialog_node": "node_5_1602830453688",
+      "previous_sibling": "node_5_1602829134001"
+    },
+    {
+      "type": "standard",
+      "title": "Goodbye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you!!! Have a great day ahead!!"
+              },
+              {
+                "text": "It was my pleasure serving you!!!"
+              },
+              {
+                "text": "Thank you!!! Do visit again"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@Goodbye || #Goodbye",
+      "dialog_node": "node_6_1602751738638",
+      "previous_sibling": "node_6_1602832645104"
+    },
+    {
+      "type": "standard",
+      "title": "Quantity",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your order for $number placed. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Would you like to add another item???"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "number": "@sys-number"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1602833020704"
+      },
+      "conditions": "true",
+      "dialog_node": "node_6_1602832645104",
+      "previous_sibling": "node_4_1602830723586"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "parent": "Welcome",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Greetings || @greetings",
+      "dialog_node": "node_9_1601380575163"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which fruit would you like to buy??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601385299609",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1602830453688"
+      },
+      "conditions": "@order:fruits",
+      "dialog_node": "response_10_1602829816506",
+      "previous_sibling": "response_2_1602755775684"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 20/- per bunch"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602830723586",
+      "disabled": true,
+      "conditions": "@vegetables:(Green Vegetables)",
+      "dialog_node": "response_10_1602830806630",
+      "previous_sibling": "response_4_1602830783693"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 40/- per kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602830723586",
+      "disabled": true,
+      "conditions": "@vegetables:Tomato",
+      "dialog_node": "response_10_1602830824848",
+      "previous_sibling": "response_10_1602830806630"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Evening!!!May I know your name please??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1601380575163",
+      "conditions": "@greetings:(Good Evening)",
+      "dialog_node": "response_1_1601380959607",
+      "previous_sibling": "response_3_1601380897461"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon!!!May I know your name please?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1601380575163",
+      "conditions": "@greetings:(Good Afternoon)",
+      "dialog_node": "response_1_1601380982823",
+      "previous_sibling": "response_1_1601380959607"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi!!! May I know your name please??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1601380575163",
+      "conditions": "anything_else",
+      "dialog_node": "response_1_1601381103243",
+      "previous_sibling": "response_1_1601380982823"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What item would you like to buy?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601385299609",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1602829134001"
+      },
+      "conditions": "@order:groceries",
+      "dialog_node": "response_2_1602755775684"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's fine!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602827878847",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1602751738638"
+      },
+      "conditions": "@response:no",
+      "dialog_node": "response_2_1602828146827",
+      "previous_sibling": "response_5_1602828123992"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 20/- per dozen"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602830453688",
+      "disabled": true,
+      "conditions": "@fruits:banana",
+      "dialog_node": "response_2_1602830573359",
+      "previous_sibling": "response_7_1602830543667"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 40/- per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602830453688",
+      "disabled": true,
+      "conditions": "@fruits:Papaya",
+      "dialog_node": "response_2_1602830657084",
+      "previous_sibling": "response_4_1602830632078"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 80/- per kg"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602830723586",
+      "disabled": true,
+      "conditions": "@vegetables:Onion",
+      "dialog_node": "response_2_1602830983961",
+      "previous_sibling": "response_10_1602830824848"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Morning!!! May I know your name please??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1601380575163",
+      "conditions": "@greetings:(Good Morning)",
+      "dialog_node": "response_3_1601380897461",
+      "previous_sibling": "node_2_1602583187803"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Which vegetable would you like to buy"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1601385299609",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1602830723586"
+      },
+      "conditions": "@order:vegetables",
+      "dialog_node": "response_3_1602829888265",
+      "previous_sibling": "response_10_1602829816506"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many dozens do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602926491342",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@fruits:banana",
+      "dialog_node": "response_3_1602926653858",
+      "previous_sibling": "response_4_1602926610875"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 40/- per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602830453688",
+      "disabled": true,
+      "conditions": "@fruits:Watermelon",
+      "dialog_node": "response_4_1602830632078",
+      "previous_sibling": "response_8_1602830603352"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 20/- per gm"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602830723586",
+      "disabled": true,
+      "conditions": "@vegetables:Garlic",
+      "dialog_node": "response_4_1602830783693",
+      "previous_sibling": "response_6_1602830754964"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602831979674",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@groceries:Bread",
+      "dialog_node": "response_4_1602832559938"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How much quantity do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602831979674",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@groceries:Rice",
+      "dialog_node": "response_4_1602832978834",
+      "previous_sibling": "response_5_1602832936223"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Would you like to buy more Grocery, fruits or vegetables??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602833020704",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1601385299609"
+      },
+      "conditions": "@response:yes",
+      "dialog_node": "response_4_1602834241372",
+      "previous_sibling": "node_10_1602835609349"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many bunches do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602926491342",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@fruits:Grapes",
+      "dialog_node": "response_4_1602926610875",
+      "previous_sibling": "response_5_1602926553098"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many pieces do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602926491342",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@fruits:Watermelon",
+      "dialog_node": "response_4_1602926727485",
+      "previous_sibling": "response_6_1602926692893"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many bunches do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602926912756",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@vegetables:(Green Vegetables)",
+      "dialog_node": "response_4_1602927081756",
+      "previous_sibling": "response_7_1602927051050"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "The following is the menu...would you like to place an order",
+            "source": "https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://listonic.com/wp-content/uploads/2018/12/shopping-list-template-basic-grocery-list.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_4_1601382815864",
+      "conditions": "@enquiry:menu",
+      "dialog_node": "response_5_1602827298293"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What would you like to buy??Type Groceries, Vegetables or Fruits to see what all is available."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602827878847",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1601385299609"
+      },
+      "conditions": "@response:yes",
+      "dialog_node": "response_5_1602828123992"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Grocery Items available are:",
+            "options": [
+              {
+                "label": "Atta",
+                "value": {
+                  "input": {
+                    "text": "Rs. 50/- per KG"
+                  }
+                }
+              },
+              {
+                "label": "Bread",
+                "value": {
+                  "input": {
+                    "text": "Rs. 25/- per loaf"
+                  }
+                }
+              },
+              {
+                "label": "Dal",
+                "value": {
+                  "input": {
+                    "text": "Rs. 150/- per KG"
+                  }
+                }
+              },
+              {
+                "label": "Milk",
+                "value": {
+                  "input": {
+                    "text": "Rs. 40/- per carton"
+                  }
+                }
+              },
+              {
+                "label": "Rice",
+                "value": {
+                  "input": {
+                    "text": "Rs. 100/- per KG"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602829134001",
+      "disabled": true,
+      "dialog_node": "response_5_1602831401286",
+      "previous_sibling": "node_2_1602831979674"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How much quantity do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602831979674",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@groceries:Dal",
+      "dialog_node": "response_5_1602832886998",
+      "previous_sibling": "response_7_1602832836597"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many packets/cartons do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602831979674",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@groceries:Milk",
+      "dialog_node": "response_5_1602832936223",
+      "previous_sibling": "response_5_1602832886998"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Could you please help me with your email ID?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602833020704",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1602836184088"
+      },
+      "conditions": "@response:no",
+      "dialog_node": "response_5_1602834311554",
+      "previous_sibling": "response_4_1602834241372"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many pieces do you want??"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602926491342",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@fruits:Papaya",
+      "dialog_node": "response_5_1602926553098"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We have 20% off on groceries"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "We have 10% off on fresh fruits and vegetables."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1601382815864",
+      "conditions": "@enquiry:offers",
+      "dialog_node": "response_6_1602827378916",
+      "previous_sibling": "response_5_1602827298293"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 25/- per gram"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1602830723586",
+      "disabled": true,
+      "conditions": "@vegetables:Ginger",
+      "dialog_node": "response_6_1602830754964",
+      "previous_sibling": "node_10_1602926912756"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many pieces do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602926491342",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@fruits:Orange",
+      "dialog_node": "response_6_1602926692893",
+      "previous_sibling": "response_3_1602926653858"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many Kgs do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602926912756",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@vegetables:Tomato",
+      "dialog_node": "response_6_1602926941587"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 40/- per bunch"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602830453688",
+      "disabled": true,
+      "conditions": "@fruits:Grapes",
+      "dialog_node": "response_7_1602830543667",
+      "previous_sibling": "node_1_1602926491342"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How much do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1602831979674",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@groceries:Atta",
+      "dialog_node": "response_7_1602832836597",
+      "previous_sibling": "response_4_1602832559938"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many Kgs do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602926912756",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@vegetables:Onion",
+      "dialog_node": "response_7_1602927051050",
+      "previous_sibling": "response_9_1602927034627"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Rs. 20/- per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602830453688",
+      "disabled": true,
+      "conditions": "@fruits:Orange",
+      "dialog_node": "response_8_1602830603352",
+      "previous_sibling": "response_2_1602830573359"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many grams do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602926912756",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@vegetables:Garlic",
+      "dialog_node": "response_9_1602926993089",
+      "previous_sibling": "response_6_1602926941587"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many grams do you want?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1602926912756",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1602832645104"
+      },
+      "conditions": "@vegetables:Ginger",
+      "dialog_node": "response_9_1602927034627",
+      "previous_sibling": "response_9_1602926993089"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$groceries_Bread",
+      "dialog_node": "slot_10_1602832357301",
+      "previous_sibling": "slot_1_1602832304632"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$number2",
+      "dialog_node": "slot_1_1602832304632",
+      "previous_sibling": "slot_3_1602832282985"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$groceries_Dal",
+      "dialog_node": "slot_3_1602832282985",
+      "previous_sibling": "slot_4_1602832071610"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1602833020704",
+      "dialog_node": "slot_3_1602834220812",
+      "previous_sibling": "response_5_1602834311554"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_4_1601382815864",
+      "variable": "$enquiry_menu",
+      "dialog_node": "slot_4_1602827080675",
+      "previous_sibling": "response_6_1602827378916"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$number1",
+      "dialog_node": "slot_4_1602832071610",
+      "previous_sibling": "slot_9_1602832022821"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$number3",
+      "dialog_node": "slot_4_1602832398583",
+      "previous_sibling": "slot_10_1602832357301"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$groceries_Milk",
+      "dialog_node": "slot_4_1602832427002",
+      "previous_sibling": "slot_4_1602832398583"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1601382815864",
+      "variable": "$enquiry_offers",
+      "dialog_node": "slot_5_1602827220834",
+      "previous_sibling": "slot_4_1602827080675"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "dialog_node": "slot_5_1602832523754",
+      "previous_sibling": "slot_9_1602832472796"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1602835609349",
+      "variable": "$payment",
+      "dialog_node": "slot_6_1602835661389"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1602830453688",
+      "variable": "$fruits_Grapes",
+      "dialog_node": "slot_7_1602830489594",
+      "previous_sibling": "response_2_1602830657084"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_2_1602831979674",
+      "variable": "$groceries_Atta",
+      "dialog_node": "slot_9_1602832022821",
+      "previous_sibling": "response_4_1602832978834"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602831979674",
+      "variable": "$number4",
+      "dialog_node": "slot_9_1602832472796",
+      "previous_sibling": "slot_4_1602832427002"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am Covida....I can provide you with the list of items in my store, show you the  prices of vegetables and give you information about any offers or discounts. I can also place an order for you.  Hi!!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": false
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Shopping_For_Essentials_Bot",
+  "language": "en",
+  "description": ""
+}
